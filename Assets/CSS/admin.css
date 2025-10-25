@@ -1,0 +1,253 @@
+/* ------------------- GENERAL ------------------- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0a0a0a;
+    color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #d4af37;
+    margin: 0;
+}
+
+/* ------------------- HEADER ------------------- */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #111, #222);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(212,175,55,0.3);
+}
+
+.admin-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #f0d56b;
+    text-decoration: none;
+    padding: 8px 18px;
+    border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 25px;
+    background: #111;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: linear-gradient(135deg, #d4af37, #f0d56b);
+    color: #000;
+}
+
+.logout-btn {
+    background: #a00;
+    color: white !important;
+    border: none;
+}
+
+/* Hamburger */
+.hamburger {
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* ------------------- TABS ------------------- */
+.tabs {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    border-bottom: 2px solid rgba(212,175,55,0.3);
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    background: #111;
+    border: 1px solid rgba(212,175,55,0.3);
+    color: #f0d56b;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background: linear-gradient(135deg, #d4af37, #f0d56b);
+    color: #000;
+}
+
+/* ------------------- MAIN ------------------- */
+.admin-container {
+    padding: 40px 30px;
+}
+
+/* ------------------- TABLES ------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #111;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(212,175,55,0.2);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    color: #f0d56b;
+    font-weight: 600;
+    background: #141414;
+}
+
+tr:nth-child(even) {
+    background: rgba(255,255,255,0.05);
+}
+
+tr:hover {
+    background: rgba(212,175,55,0.1);
+}
+
+.status-select {
+    background: #111;
+    color: #f0d56b;
+    border: 1px solid #d4af37;
+    padding: 5px 8px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.status-select:hover {
+    background: #222;
+}
+
+input[type=number] {
+    width: 70px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #d4af37;
+    background: #111;
+    color: #f0d56b;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+@media screen and (max-width: 768px) {
+    .hamburger { display: block; }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 30px;
+        background: #111;
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid rgba(212,175,55,0.3);
+    }
+    .nav-links.active { display: flex; }
+
+    .tabs { flex-direction: column; gap: 10px; }
+    .tab-btn { width: 100%; text-align: center; }
+}
+
+/* ------------------- MISC ------------------- */
+.tab-content { display: none; }
+/* ------------------- ADMIN AUTH PAGE ------------------- */
+.admin-auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #0a0a0a;
+  padding: 20px;
+}
+
+.admin-auth-box {
+  background: #111;
+  border: 1px solid rgba(212,175,55,0.3);
+  padding: 50px 40px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(212,175,55,0.2);
+}
+
+.admin-auth-box h1 {
+  color: #d4af37;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.admin-auth-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* spacing between inputs */
+  align-items: center;
+}
+
+.admin-auth-box input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(212,175,55,0.3);
+  background: #0a0a0a;
+  color: #f0d56b;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-auth-box input:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 8px rgba(212,175,55,0.4);
+}
+
+.admin-auth-box .btn {
+  width: 100%;
+  background: linear-gradient(135deg, #d4af37, #f0d56b);
+  color: #000;
+  border: none;
+  padding: 12px;
+  font-weight: 700;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.admin-auth-box .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(212,175,55,0.5);
+}
+
+/* Error messages */
+.admin-auth-box .error {
+  color: #ff6b6b;
+  font-weight: 600;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+

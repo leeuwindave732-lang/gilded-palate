@@ -1,0 +1,55 @@
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* --- Tablets --- */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    padding: 15px 30px;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px;
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    padding: 80px 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+
+  .product-card img {
+    height: 180px;
+  }
+}
+
